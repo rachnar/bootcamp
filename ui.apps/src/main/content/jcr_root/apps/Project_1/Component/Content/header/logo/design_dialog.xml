@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Dialog"
+    title="ex2"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <image
+                jcr:primaryType="cq:Widget"
+                path="/libs/foundation/components/logo/design_dialog/items/img.infinity.json"
+                title="Image"
+                xtype="cqinclude"/>
+        </items>
+    </items>
+</jcr:root>

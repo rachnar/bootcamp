@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    title="dialog"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <tab1
+                jcr:primaryType="cq:Panel"
+                title="foreGround">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <title
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Enter the Heading"
+                        name="./title"
+                        xtype="textfield"/>
+                    <description
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Enter the content"
+                        name="./desc"
+                        xtype="textarea"/>
+                    <multiField
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Buttons"
+                        name="./buttonText"
+                        xtype="multifield"/>
+                    <color
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Select color"
+                        name="./color"
+                        type="select"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <red
+                                jcr:primaryType="nt:unstructured"
+                                text="Red"
+                                value="red"/>
+                            <blue
+                                jcr:primaryType="nt:unstructured"
+                                text="Blue"
+                                value="blue"/>
+                            <pink
+                                jcr:primaryType="nt:unstructured"
+                                text="Pink"
+                                value="pink"/>
+                        </options>
+                    </color>
+                </items>
+            </tab1>
+            <image
+                jcr:primaryType="cq:Widget"
+                cropParameter="./imageCrop"
+                ddGroups="[media]"
+                fileNameParameter="./fileName"
+                fileReferenceParameter="./fileReference"
+                mapParameter="./imageMap"
+                name="./file"
+                requestSuffix=".img.png"
+                rotateParameter="./imageRotate"
+                title="Spotlight Image"
+                xtype="html5smartimage"/>
+        </items>
+    </items>
+</jcr:root>

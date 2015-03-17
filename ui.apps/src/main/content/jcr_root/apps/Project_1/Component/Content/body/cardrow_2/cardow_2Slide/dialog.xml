@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    title="dialog"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <tab1
+                jcr:primaryType="cq:Panel"
+                title="foreGround">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <title
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Enter the Heading"
+                        name="./title"
+                        xtype="textfield"/>
+                    <subHeading
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="SubHeading"
+                        name="./subHeading"
+                        xtype="textarea"/>
+                    <description
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Enter the content"
+                        name="./desc"
+                        xtype="textarea"/>
+                    <multiField
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Buttons"
+                        name="./buttonText"
+                        xtype="multifield"/>
+                    <icons
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Select icon"
+                        name="./icon"
+                        type="select"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <icon1
+                                jcr:primaryType="nt:unstructured"
+                                text="icon1"
+                                value="icn1"/>
+                            <icon2
+                                jcr:primaryType="nt:unstructured"
+                                text="icon2"
+                                value="icn2"/>
+                            <icon3
+                                jcr:primaryType="nt:unstructured"
+                                text="icon3"
+                                value="icn3"/>
+                            <icon4
+                                jcr:primaryType="nt:unstructured"
+                                text="icon4"
+                                value="icn4"/>
+                            <icon5
+                                jcr:primaryType="nt:unstructured"
+                                text="icon5"
+                                value="icn5"/>
+                        </options>
+                    </icons>
+                </items>
+            </tab1>
+            <image
+                jcr:primaryType="cq:Widget"
+                cropParameter="./imageCrop"
+                ddGroups="[media]"
+                fileNameParameter="./fileName"
+                fileReferenceParameter="./fileReference"
+                mapParameter="./imageMap"
+                name="./file"
+                requestSuffix=".img.png"
+                rotateParameter="./imageRotate"
+                title="Background Image"
+                xtype="html5smartimage"/>
+        </items>
+    </items>
+</jcr:root>

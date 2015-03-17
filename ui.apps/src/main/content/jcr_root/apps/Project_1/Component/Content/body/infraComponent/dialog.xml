@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Dialog"
+    title="dialog"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <image
+                jcr:primaryType="cq:Widget"
+                cropParameter="./imageCrop"
+                ddGroups="[media]"
+                fileNameParameter="./fileName"
+                fileReferenceParameter="./fileReference"
+                mapParameter="./imageMap"
+                name="./file"
+                requestSuffix=".img.png"
+                rotateParameter="./imageRotate"
+                title="Image"
+                xtype="html5smartimage"/>
+            <tab1
+                jcr:primaryType="cq:Panel"
+                title="Content">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <title
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Enter the Title"
+                        name="./title"
+                        xtype="textfield"/>
+                    <description
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Enter the Description"
+                        name="./description"
+                        xtype="textarea"/>
+                </items>
+            </tab1>
+            <tab2
+                jcr:primaryType="cq:Panel"
+                title="Stats">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <country
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Number of Countries"
+                        name="./country"
+                        xtype="textfield"/>
+                    <branch
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Number of Branches"
+                        name="./branch"
+                        xtype="textfield"/>
+                    <unit
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Number of Units"
+                        name="./unit"
+                        xtype="textfield"/>
+                    <network
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Distribution Network Number"
+                        name="./network"
+                        xtype="textfield"/>
+                </items>
+            </tab2>
+        </items>
+    </items>
+</jcr:root>
