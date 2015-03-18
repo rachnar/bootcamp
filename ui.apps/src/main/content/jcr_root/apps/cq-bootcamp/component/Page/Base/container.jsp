@@ -1,1 +1,0 @@
-<cq:includeClientLib categories="form"/>
