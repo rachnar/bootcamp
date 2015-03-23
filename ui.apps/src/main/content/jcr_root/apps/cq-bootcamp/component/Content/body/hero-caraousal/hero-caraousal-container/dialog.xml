@@ -12,7 +12,7 @@
                 <items jcr:primaryType="cq:WidgetCollection">
                     <slide_no
                         jcr:primaryType="cq:Widget"
-                        fieldLabel="Enter no. of components"
+                        fieldLabel="Enter no. of slides"
                         name="./slides"
                         xtype="numberfield"/>
                 </items>

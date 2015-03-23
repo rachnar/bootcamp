@@ -1,16 +1,5 @@
- <%--
-
-  connect component component.
-
-  connect component
-
---%><%
-%><%@include file="/libs/foundation/global.jsp"%><%
-%><%@page session="false" %><%
-%><%
-	// TODO add you code here
-%>
-
+<%@include file="/apps/cq-bootcamp/global.jsp"%>
+<%@page session="false" %>
 
 <ul>
 

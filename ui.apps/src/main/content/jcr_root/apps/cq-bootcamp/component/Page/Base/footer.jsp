@@ -1,38 +1,36 @@
-
 <%@taglib prefix="cq" uri="http://www.day.com/taglibs/cq/1.0" %>
-
 
 
 <footer>
     <div class="container">
         <div class="master">
             <div class="col">
-                <cq:include path="footer1" resourceType="/apps/cq-bootcamp/component/Content/footer/multiFootercomponent"/>
+                <cq:include path="footer1"
+                            resourceType="/apps/cq-bootcamp/component/Content/footer/multiFooter"/>
             </div>
             <div class="col">
-                <cq:include path="footer2" resourceType="/apps/cq-bootcamp/component/Content/footer/multiFootercomponent"/>
+                <cq:include path="footer2"
+                            resourceType="/apps/cq-bootcamp/component/Content/footer/multiFooter"/>
             </div>
             <div class="col">
-                <cq:include path="footer3" resourceType="/apps/cq-bootcamp/component/Content/footer/multiFootercomponent"/>
+                <cq:include path="footer3"
+                            resourceType="/apps/cq-bootcamp/component/Content/footer/multiFooter"/>
             </div>
             <div class="col">
-                <cq:include path="footer4" resourceType="/apps/cq-bootcamp/component/Content/footer/multiFootercomponent"/>
+                <cq:include path="footer4"
+                            resourceType="/apps/cq-bootcamp/component/Content/footer/multiFooter"/>
             </div>
             <div class="col">
-                <cq:include path="footer5" resourceType="/apps/cq-bootcamp/component/Content/footer/multiFootercomponent"/>
+                <cq:include path="footer5"
+                            resourceType="/apps/cq-bootcamp/component/Content/footer/multiFooter"/>
             </div>
 
             <div class="col">
                 <div class="linkWrapper">
                     <div class="footerWrapSocial">
-                        <div class="socialWrap">
-                            <div>Find us on:</div>
-                            <ul>
-                                <li><a href="javascript:;"><i class="fa fa-facebook fa-2x"></i></a></li>
-                                <li><a href="javascript:;"><i class="fa fa-twitter fa-2x"></i></a></li>
-                                <li><a href="javascript:;"><i class="fa fa-youtube fa-2x"></i></a></li>
-                            </ul>
-                        </div>
+
+                                <cq:include path="find-us-on-container" resourceType="/apps/cq-bootcamp/component/Content/footer/findUs"/>
+
 
                     </div>
                 </div>

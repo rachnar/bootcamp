@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
-    jcr:description="connect component"
+    jcr:description="This is the Container for the find us component of ig-bootcamp project"
     jcr:primaryType="cq:Component"
-    jcr:title="connect slides"
-    componentGroup="havells_home"/>
+    jcr:title="Find Us Container"
+    componentGroup=".hidden"/>

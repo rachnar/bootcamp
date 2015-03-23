@@ -1,27 +1,15 @@
-<%--
-
-  my top navigation component component.
-
-  this is my top navigation component
-
---%><%
-%><%@include file="/libs/foundation/global.jsp"%><%
+<%@include file="/libs/foundation/global.jsp"%><%
 %><%@page session="false" import="java.util.Iterator,com.day.text.Text,com.day.cq.wcm.api.PageFilter, com.day.cq.wcm.api.Page,com.day.cq.wcm.foundation.Navigation,com.day.cq.commons.Doctype" %><%
-%><% 
-	// TODO add you code her 
 %>
-
 <%
 
     // get starting point of navigation
+    Page navRootPage = currentPage.getAbsoluteParent(1);
 
-
-
-
-            Page navRootPage = currentPage.getAbsoluteParent(3);
     if (navRootPage == null && currentPage != null) {
     navRootPage = currentPage;
     }
+
     if (navRootPage != null) {
         Iterator<Page> children = navRootPage.listChildren(new PageFilter(request));%>
 
@@ -32,16 +20,18 @@
         while (children.hasNext()) {
 
 
-
             %>
 
 
-    <li>
+    <li style="height:97px">
 
 
-        <%  Page child = children.next(); 
+        <%  Page child = children.next();
+
+
         currentPage=child;
 %>
+
 
 
 
@@ -55,12 +45,14 @@
                       <div class="master">
 <%
 
- Page homePage = currentPage.getAbsoluteParent(2);
+ Page homePage = currentPage.getAbsoluteParent(3);
+
     String home = homePage != null ? homePage.getPath() : Text.getAbsoluteParent(currentPage.getPath(), 2);
     int absParent = currentStyle.get("absParent", 2);
 
     PageFilter filter = new PageFilter(request);
-    Navigation nav = new Navigation(currentPage, absParent, filter, 3);
+            // set abcParent to zero
+    Navigation nav = new Navigation(currentPage, 0, filter, 3);
     String xs = Doctype.isXHTML(request) ? "/" : "";
 
     // help linkchecker to increase performance
@@ -91,31 +83,12 @@
             %>
 
         </ul>
-
-
-
-
-
-
-
-
-
                         </div>
             </div>
 
-
-
-
-
         <% }%>
-    
+    </li>
+    </ul>
     <%}%>
 
-
-
-
-
-
-
-
-    <nav>
+                </nav>
