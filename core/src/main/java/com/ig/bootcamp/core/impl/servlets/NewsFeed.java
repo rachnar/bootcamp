@@ -1,6 +1,8 @@
 package com.ig.bootcamp.core.impl.servlets;
 
 
+import com.day.cq.commons.jcr.JcrConstants;
+import com.day.cq.wcm.api.NameConstants;
 import org.apache.felix.scr.annotations.Component;
 import org.apache.felix.scr.annotations.Properties;
 import org.apache.felix.scr.annotations.Property;
@@ -31,7 +33,7 @@ import java.io.PrintWriter;
 )
 public class NewsFeed extends SlingSafeMethodsServlet {
 
-    static final String JCR_PRIMARYTYPE = "cq:Page";
+
 
     protected void doGet(SlingHttpServletRequest request,
                          SlingHttpServletResponse response) throws IOException {
@@ -52,7 +54,7 @@ public class NewsFeed extends SlingSafeMethodsServlet {
                 for (Resource date : child.getChildren()) {
 
                     ValueMap valueMap = date.adaptTo(ValueMap.class);
-                    if (JCR_PRIMARYTYPE.equals(valueMap.get("jcr:primaryType"))) {
+                    if(NameConstants.NT_PAGE.equals(valueMap.get(JcrConstants.JCR_PRIMARYTYPE))) {
 
                         Resource content = date.getChild("jcr:content");
                         ValueMap map = content.adaptTo(ValueMap.class);
