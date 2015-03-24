@@ -10,14 +10,14 @@
     <div class="col">
         <div class="sliderWrapper">
             <h2>
-                <cq:text value="${properties.title}"  tagName="h2" default="Products" />
+                <cq:text property="title"  tagName="h2" default="Products" />
 
             <div class="subHeadWrap">
                 <div class="subHead">
-                    <cq:text value="${properties.subHeading}"  default="Appliances" />
+                    <cq:text property="subHeading"  default="Appliances" />
                </div>
             </div>
-                    <cq:text value="${properties.desc}" tagName="p" default="Welcome to the world of fresh living with our range of domestic
+                    <cq:text property="desc" tagName="p" default="Welcome to the world of fresh living with our range of domestic
                     appliances. These appliances will help you discover the joy of fresh
                     eating and living..." />
             <div class="buttonWrapper">

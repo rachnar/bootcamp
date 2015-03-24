@@ -1,20 +1,13 @@
 <%@include file="/apps/cq-bootcamp/global.jsp" %>
 <%@page session="false" import="com.day.cq.wcm.api.WCMMode" %>
-<%
-    WCMMode mode = WCMMode.fromRequest(request);
-    if (mode.toString().equals("PREVIEW")) {
-%>
-<c:set var="set" value="slick-slider"/>
-<%
-}
-else
-{
-%>
+<%--TRUE if Preview--%>
+<c:if test= "${mode}">
+    <c:set var="set" value="slick-slider"/>
+</c:if>
 
-<c:set var="height" value="auto"/>
-<%
- }
-%>
+<c:otherwise>
+    <c:set var="height" value="auto"/>
+</c:otherwise>
 
 <div class="cardRow">
     <div class="col havellsAtGlance" style="height:${height}">

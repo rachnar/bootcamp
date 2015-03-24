@@ -6,8 +6,8 @@
 
     <div class="spotlightContentLeft ${properties.color}">
         <div class="content">
-            <div class="heading">${properties.title}</div>
-            <cq:text value="${properties.desc}" tagName="p"
+            <div class="heading"> <cq:text property="title" default="Chairman's Letter"/></div>
+            <cq:text property="desc" tagName="p"
                      default="kkkk a brand story with a difference,result is an unusual set of products, offerings and deep connect with the end customer"/>
 
 

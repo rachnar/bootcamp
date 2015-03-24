@@ -2,16 +2,11 @@
 <%@page session="false" import="com.day.cq.wcm.api.WCMMode" %>
 
 <cq:text placeholder="product description"/>
-<%
-    WCMMode mode = WCMMode.fromRequest(request);
-    if (mode.toString().equals("PREVIEW")) {
-%>
 
-<c:set var="set" value="slick-slider"/>
+<c:if test= "${mode}">
+    <c:set var="set" value="slick-slider"/>
+</c:if>
 
-<%
-    }
-%>
 
 
 <br>

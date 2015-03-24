@@ -54,8 +54,9 @@
         com.day.cq.wcm.api.designer.Style,
         com.day.cq.wcm.api.components.ComponentContext,
         com.day.cq.wcm.api.components.EditContext"
-        %><%@taglib prefix="sling" uri="http://sling.apache.org/taglibs/sling/1.0" %><%
-%><%@taglib prefix="cq" uri="http://www.day.com/taglibs/cq/1.0" %><%
+        %><%@taglib prefix="sling" uri="http://sling.apache.org/taglibs/sling/1.0" %>
+<%@page session="false" import="com.day.cq.wcm.api.WCMMode" %>
+<%@taglib prefix="cq" uri="http://www.day.com/taglibs/cq/1.0" %><%
 %><%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %><%
 %><%@taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %><%
 %><%@taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %><%
@@ -63,4 +64,4 @@
 
     // add more initialization code here
 
-%>
+%>   <c:set var="mode" value="<%=WCMMode.fromRequest(request) == WCMMode.PREVIEW%>"/>

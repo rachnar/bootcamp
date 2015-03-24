@@ -12,7 +12,7 @@
 
 
                 type: "GET",
-                url: "/bin/service/rss?arg0=" + el,
+                url: "/bin/service/rss?newsCount=" + el,
 
 
                 dataType: "json",

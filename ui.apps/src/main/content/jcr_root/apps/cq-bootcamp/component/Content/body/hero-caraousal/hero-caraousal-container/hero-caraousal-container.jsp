@@ -1,17 +1,9 @@
 <%@include file="/apps/cq-bootcamp/global.jsp"%>
 <%@page session="false" import="com.day.cq.wcm.api.WCMMode"%>
+<c:if test= "${mode}">
+    <c:set var="set" value="slick-slider"/>
+</c:if>
 
-<%
-    WCMMode mode= WCMMode.fromRequest(request);
-if(mode.toString().equals("PREVIEW"))
-{
-%>
-
-<c:set var="set" value="slick-slider" />
-
-<%
-}
-%>
 <br>
 <cq:text placeholder="hero caraousel"/>
 <div class="spotlightWrapper">

@@ -6,14 +6,14 @@
      style='background-image: url(${properties.fileReference}); padding: 10px 10px 257px 10px'>
     <div class="col">
         <div class="sliderWrapper">
-            <cq:text value="${properties.title}"  tagName="h2" default="Corporate Social Responsibilities" />
+            <cq:text property="title" tagName="h2" default="Corporate Social Responsibilities" />
 
             <div class="subHead">
-                <cq:text value="${properties.subHeading}" default="Intelligrape Pvt Ltd. is committed to the cause of Software development." />
+                <cq:text property="subHeading" default="Intelligrape Pvt Ltd. is committed to the cause of Software development." />
 
             </div>
             <p>
-                <cq:text value="${properties.desc}"  tagName="p" default="The company provides mid-day meals to about 0,000 school children every day in around 3.50 government schools in Alwar district." />
+                <cq:text property="desc"  tagName="p" default="The company provides mid-day meals to about 0,000 school children every day in around 3.50 government schools in Alwar district." />
             </p>
 
             <div class="buttonWrapper">

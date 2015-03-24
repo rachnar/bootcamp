@@ -28,7 +28,7 @@ import java.io.PrintWriter;
 @Service(Servlet.class)
 @Properties({
         @Property(name = "sling.servlet.paths", value = "/bin/service/rss"),
-        @Property(name = "sling.servlet.selectors", value = "hello")
+
 }
 )
 public class NewsFeed extends SlingSafeMethodsServlet {
@@ -46,7 +46,7 @@ public class NewsFeed extends SlingSafeMethodsServlet {
         PrintWriter pw = response.getWriter();
         Resource resource = resourceResolver.getResource("/content/cqWebsite/2015");
 
-        int val = Integer.parseInt(request.getParameter("arg0"));
+        int val = Integer.parseInt(request.getParameter("newsCount"));
         try {
             for (Resource child : resource.getChildren()) {
 
@@ -59,12 +59,12 @@ public class NewsFeed extends SlingSafeMethodsServlet {
                         Resource content = date.getChild("jcr:content");
                         ValueMap map = content.adaptTo(ValueMap.class);
 
-                        String str = map.get("jcr:title").toString();
+                        String title = map.get("jcr:title").toString();
                         String id = map.get("id").toString();
 
                         obj = new JSONObject();
 
-                        obj.put("name", str);
+                        obj.put("name", title);
                         obj.put("id", id);
 
 
