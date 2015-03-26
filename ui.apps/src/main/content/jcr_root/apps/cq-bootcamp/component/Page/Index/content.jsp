@@ -1,7 +1,7 @@
 <%@include file="/apps/cq-bootcamp/global.jsp" %>
 <div style="clear:both;"></div>
 
-
+<cq:include path="quick-links" resourceType="cq-bootcamp/component/Content/body/quick-links"/>
 <cq:include path="spotlightParsys" resourceType="foundation/components/parsys"/>
 
 <div class="homePageWrapper">

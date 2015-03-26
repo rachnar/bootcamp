@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    title="dialog"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <tab1
+                jcr:primaryType="cq:Panel"
+                title="Tab 1">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <links-title
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Link Title"
+                        name="./headTitle"
+                        xtype="textfield"/>
+                    <items jcr:primaryType="cq:WidgetCollection">
+                        <typeconfigs
+                            jcr:primaryType="cq:Widget"
+                            fieldLabel="Sublinks"
+                            name="./sublinks"
+                            xtype="customconfigmultifield">
+                            <fieldConfigs jcr:primaryType="cq:WidgetCollection">
+                                <linkTitle
+                                    jcr:primaryType="cq:Widget"
+                                    fieldLabel="Link Name"
+                                    name="linkName"
+                                    xtype="textfield"/>
+                                <icons
+                                    jcr:primaryType="cq:Widget"
+                                    fieldLabel="Select icon"
+                                    name="icon"
+                                    type="select"
+                                    xtype="selection">
+                                    <options jcr:primaryType="cq:WidgetCollection">
+                                        <icon1
+                                            jcr:primaryType="nt:unstructured"
+                                            text="Havells Support"
+                                            value="fa fa-gear"/>
+                                        <icon2
+                                            jcr:primaryType="nt:unstructured"
+                                            text="Where to Buy"
+                                            value="fa fa-shopping-cart"/>
+                                        <icon3
+                                            jcr:primaryType="nt:unstructured"
+                                            text="Register your Product"
+                                            value="fa fa-info"/>
+                                        <icon4
+                                            jcr:primaryType="nt:unstructured"
+                                            text="Service Center Locator"
+                                            value="fa fa-map-marker"/>
+                                        <icon5
+                                            jcr:primaryType="nt:unstructured"
+                                            text="Faqs"
+                                            value="fa fa-question"/>
+                                    </options>
+                                </icons>
+                                <URL
+                                    jcr:primaryType="cq:Widget"
+                                    fieldLabel="Url"
+                                    name="url"
+                                    xtype="textfield"/>
+                            </fieldConfigs>
+                        </typeconfigs>
+                    </items>
+                </items>
+            </tab1>
+        </items>
+    </items>
+</jcr:root>
