@@ -4,7 +4,7 @@
 <%@page session="false" %>
 
 
-<cq:text placeholder="hello"/>
+<cq:text placeholder="quick links"/>
 <div class="quickLinkWrapper">
     <ul>
         <li class="trigger"><div class="icon"><i class="fa fa-plus"></i></div><div class="label"><cq:text value="${currentStyle.headTitle}" default="Quick Links" /></div></li>

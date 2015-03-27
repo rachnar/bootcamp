@@ -2,5 +2,5 @@
 <jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
     cq:actions="[text:Edit the product description slide,-,edit,-,delete,insert,copymove]"
     cq:dialogMode="floating"
-    cq:layout="rollover"
+    cq:layout="editbar"
     jcr:primaryType="cq:EditConfig"/>
