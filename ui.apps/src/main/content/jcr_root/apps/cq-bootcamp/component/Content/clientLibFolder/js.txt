@@ -4,3 +4,4 @@ js/main.js
 js/modernizr-2.6.2.min.js
 js/plugins.js
 js/respond.js
+js/CustomConfigMultiField.js
